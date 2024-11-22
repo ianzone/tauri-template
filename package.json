@@ -7,8 +7,11 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "tauri:dev": "tauri dev",
-    "update": "nu --latest && cargo update --manifest-path src-tauri/Cargo.toml"
+    "lint": "biome check --fix src --reporter summary",
+    "app:dev": "tauri dev",
+    "update": "nu --latest && cargo update --manifest-path src-tauri/Cargo.toml",
+    "postinstall": "lefthook install",
+    "commit": "git add -A && git-cz"
   },
   "dependencies": {
     "@tauri-apps/api": "^2.1.1",
@@ -22,7 +25,12 @@
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react-swc": "^3.7.1",
+    "git-cz": "^4.9.0",
+    "happy-dom": "^15.11.6",
+    "lefthook": "^1.8.4",
     "typescript": "^5.7.2",
-    "vite": "^5.4.11"
-  }
+    "vite": "^5.4.11",
+    "vitest": "^2.1.5"
+  },
+  "trustedDependencies": ["@biomejs/biome"]
 }
