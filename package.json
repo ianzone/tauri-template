@@ -7,6 +7,7 @@
     "dev": "tauri dev",
     "build": "tauri build",
     "preview": "tauri dev --release",
+    "task": "cargo build --manifest-path src-tauri/Cargo.toml --no-default-features && na vite",
     "lint": "biome check --fix src",
     "update": "nu --latest && cargo update --manifest-path src-tauri/Cargo.toml",
     "postinstall": "lefthook install",

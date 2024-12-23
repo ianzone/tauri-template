@@ -8,16 +8,14 @@
       "request": "launch",
       "program": "${workspaceRoot}/src-tauri/target/debug/tauri-app.exe",
       "cwd": "${workspaceRoot}",
-      "preLaunchTask": "ui:dev"
+      "preLaunchTask": "dev"
     },
     {
       "name": "LLDB Debug", // 使用 LLDB 调试 Rust，较慢，在 macOS 和 Linux 上使用
       "type": "lldb",
       "request": "launch",
-      "cargo": {
-        "args": ["build", "--manifest-path=./src-tauri/Cargo.toml", "--no-default-features"]
-      },
-      "preLaunchTask": "ui:dev",
+      "program": "${workspaceRoot}/src-tauri/target/debug/tauri-app.exe",
+      "preLaunchTask": "dev",
       "env": {
         "RUST_BACKTRACE": "1",
         "RUST_LOG": "debug"
