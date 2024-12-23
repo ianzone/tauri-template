@@ -4,11 +4,10 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
+    "dev": "tauri dev",
+    "build": "tauri build",
+    "preview": "tauri dev --release",
     "lint": "biome check --fix src",
-    "app": "tauri dev",
     "update": "nu --latest && cargo update --manifest-path src-tauri/Cargo.toml",
     "postinstall": "lefthook install",
     "commit": "git add -A && git-cz"
@@ -21,16 +20,16 @@
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "@tauri-apps/cli": "^2.1.0",
-    "@types/node": "^22.10.1",
-    "@types/react": "^19.0.1",
-    "@types/react-dom": "^19.0.1",
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
     "@vitejs/plugin-react-swc": "^3.7.2",
     "biome-extends": "^1.0.1",
     "git-cz": "^4.9.0",
     "happy-dom": "^15.11.7",
-    "lefthook": "^1.9.0",
+    "lefthook": "^1.10.0",
     "typescript": "^5.7.2",
-    "vite": "^6.0.3",
+    "vite": "^6.0.5",
     "vitest": "^2.1.8"
   },
   "trustedDependencies": ["@biomejs/biome"]

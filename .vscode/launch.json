@@ -1,0 +1,27 @@
+{
+  // https://tauri.app/develop/debug/vscode/#with-visual-studio-windows-debugger-on-windows
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "MSVC Debug", // 使用 MSVC 调试 Rust，在 Windows 速度更快
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${workspaceRoot}/src-tauri/target/debug/tauri-app.exe",
+      "cwd": "${workspaceRoot}",
+      "preLaunchTask": "ui:dev"
+    },
+    {
+      "name": "LLDB Debug", // 使用 LLDB 调试 Rust，较慢，在 macOS 和 Linux 上使用
+      "type": "lldb",
+      "request": "launch",
+      "cargo": {
+        "args": ["build", "--manifest-path=./src-tauri/Cargo.toml", "--no-default-features"]
+      },
+      "preLaunchTask": "ui:dev",
+      "env": {
+        "RUST_BACKTRACE": "1",
+        "RUST_LOG": "debug"
+      }
+    }
+  ]
+}

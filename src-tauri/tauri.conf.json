@@ -4,9 +4,9 @@
   "version": "0.1.0",
   "identifier": "com.tauri-app.app",
   "build": {
-    "beforeDevCommand": "bun run dev",
+    "beforeDevCommand": "na vite",
     "devUrl": "http://localhost:1420",
-    "beforeBuildCommand": "bun run build",
+    "beforeBuildCommand": "na tsc --noEmit && na vite build",
     "frontendDist": "../dist"
   },
   "app": {
@@ -15,7 +15,6 @@
         "title": "tauri-app",
         "width": 800,
         "height": 600
-        
       }
     ],
     "security": {
