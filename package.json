@@ -27,11 +27,11 @@
     "@vitejs/plugin-react-swc": "^3.7.2",
     "biome-extends": "^1.0.1",
     "git-cz": "^4.9.0",
-    "happy-dom": "^15.11.7",
-    "lefthook": "^1.10.0",
+    "happy-dom": "^16.0.1",
+    "lefthook": "^1.10.1",
     "typescript": "^5.7.2",
-    "vite": "^6.0.5",
+    "vite": "^6.0.6",
     "vitest": "^2.1.8"
   },
-  "trustedDependencies": ["@biomejs/biome"]
+  "trustedDependencies": ["@biomejs/biome", "@swc/core", "esbuild", "lefthook"]
 }
