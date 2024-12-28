@@ -10,7 +10,7 @@
     "task": "cargo build --manifest-path src-tauri/Cargo.toml --no-default-features && na vite",
     "lint": "biome check --fix src",
     "update": "nu --latest && cargo update --manifest-path src-tauri/Cargo.toml",
-    "postinstall": "lefthook install",
+    "postinstall": "lefthook install && echo '请全局安装 `@antfu/ni` 以管理包管理器'",
     "commit": "git add -A && git-cz"
   },
   "dependencies": {

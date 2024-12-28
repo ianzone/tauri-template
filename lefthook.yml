@@ -17,7 +17,7 @@ pre-commit:
   commands:
     staged:
       priority: 1
-      run: echo {staged_files}.Split(" ")
+      run: echo {staged_files}
     security:
       priority: 2
       run: gitleaks protect --staged --no-banner
