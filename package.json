@@ -10,26 +10,29 @@
     "task": "cargo build --manifest-path src-tauri/Cargo.toml --no-default-features && na vite",
     "lint": "biome check --fix src",
     "update": "nu --latest && cargo update --manifest-path src-tauri/Cargo.toml",
-    "postinstall": "lefthook install && echo '请全局安装 `@antfu/ni` 以管理包管理器'",
-    "commit": "git add -A && git-cz"
+    "postinstall": "lefthook install",
+    "commit": "git add -A && git commit --no-edit",
+    "squash": "node ./squash.mjs && git commit --no-edit --no-verify"
   },
   "dependencies": {
-    "@tauri-apps/api": "^2.1.1",
+    "@tauri-apps/api": "^2.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "@tauri-apps/cli": "^2.1.0",
-    "@types/node": "^22.10.3",
-    "@types/react": "^19.0.2",
-    "@types/react-dom": "^19.0.2",
+    "@tauri-apps/cli": "^2.2.5",
+    "@types/node": "^22.10.7",
+    "@types/react": "^19.0.7",
+    "@types/react-dom": "^19.0.3",
     "@vitejs/plugin-react-swc": "^3.7.2",
     "biome-extends": "^1.0.1",
     "git-cz": "^4.9.0",
-    "lefthook": "^1.10.1",
-    "typescript": "^5.7.2",
-    "vite": "^6.0.6"
+    "knip": "^5.42.2",
+    "lefthook": "^1.10.8",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.7",
+    "zx": "^8.3.0"
   },
   "trustedDependencies": ["@biomejs/biome", "@swc/core", "esbuild", "lefthook"]
 }
