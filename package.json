@@ -10,29 +10,29 @@
     "task": "cargo build --manifest-path src-tauri/Cargo.toml --no-default-features && na vite",
     "lint": "biome check --fix src",
     "update": "nu --latest && cargo update --manifest-path src-tauri/Cargo.toml",
-    "postinstall": "lefthook install",
+    "prepare": "lefthook install",
     "commit": "git add -A && git commit --no-edit",
-    "squash": "node ./squash.mjs && git commit --no-edit --no-verify"
+    "squash": "bun scripts/squash.ts && git commit --no-edit --no-verify"
   },
   "dependencies": {
-    "@tauri-apps/api": "^2.2.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "@es-proj/utils": "^1.6.3",
+    "@tauri-apps/api": "^2.4.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "@tauri-apps/cli": "^2.2.7",
-    "@types/node": "^22.13.4",
-    "@types/react": "^19.0.8",
-    "@types/react-dom": "^19.0.3",
-    "@vitejs/plugin-react-swc": "^3.8.0",
-    "es-proj": "^1.1.0",
+    "@es-proj/configs": "^1.0.4",
+    "@tauri-apps/cli": "^2.4.0",
+    "@types/node": "^22.13.14",
+    "@types/react": "^19.0.12",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react-swc": "^3.8.1",
     "git-cz": "^4.9.0",
-    "knip": "^5.44.1",
-    "lefthook": "^1.10.10",
-    "typescript": "^5.7.3",
-    "vite": "^6.1.0",
-    "zx": "^8.3.2"
+    "knip": "^5.46.3",
+    "lefthook": "^1.11.5",
+    "typescript": "^5.8.2",
+    "vite": "^6.2.3"
   },
   "trustedDependencies": ["@biomejs/biome", "@swc/core", "esbuild", "lefthook"]
 }
