@@ -15,18 +15,18 @@
     "squash": "bun scripts/squash.ts && git commit --no-edit --no-verify"
   },
   "dependencies": {
-    "@tauri-apps/api": "^2.4.1",
+    "@tauri-apps/api": "^2.6.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "@es-proj/react": "^1.0.4",
-    "@tauri-apps/cli": "^2.4.1",
-    "@vitejs/plugin-react-swc": "^3.8.1",
+    "@es-proj/react": "^1.0.8",
+    "@tauri-apps/cli": "^2.6.2",
+    "@vitejs/plugin-react-swc": "^3.10.2",
     "git-cz": "^4.9.0",
-    "knip": "^5.50.2",
-    "lefthook": "^1.11.9",
-    "vite": "^6.2.6"
+    "knip": "^5.61.3",
+    "lefthook": "^1.11.16",
+    "vite": "^7.0.2"
   },
   "trustedDependencies": ["@biomejs/biome", "@swc/core", "esbuild", "lefthook"]
 }
