@@ -23,7 +23,7 @@ export function App() {
         <a href='https://tauri.app' target='_blank' rel='noreferrer'>
           <img src='/tauri.svg' className='logo tauri' alt='Tauri logo' />
         </a>
-        <a href='https://reactjs.org' target='_blank' rel='noreferrer'>
+        <a href='https://react.dev' target='_blank' rel='noreferrer'>
           <img src={reactLogo} className='logo react' alt='React logo' />
         </a>
       </div>
@@ -37,11 +37,7 @@ export function App() {
           greet();
         }}
       >
-        <input
-          id='greet-input'
-          onChange={(e) => setName(e.currentTarget.value)}
-          placeholder='Enter a name...'
-        />
+        <input id='greet-input' onChange={(e) => setName(e.currentTarget.value)} placeholder='Enter a name...' />
         <button type='submit'>Greet</button>
       </form>
 
